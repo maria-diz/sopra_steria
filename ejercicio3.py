@@ -18,4 +18,7 @@ def calcula_salario():
     print(f"El salario recibido por el trabajador es {salario}€")
 
 
-calcula_salario()
+try:
+    calcula_salario()
+except ValueError:
+    print("Error, los datos introducidos no son correctos")

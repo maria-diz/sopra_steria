@@ -15,9 +15,16 @@ def leer_numero():
 
     print(f"***** LISTA DE NUMEROS DESCENDIENTE: *****")
 
+    # Comprobamos si el numero es negativo para iterar sumando o restando.
+    if numero < 0: 
+        for i in range(numero,1,2):
+            print(i)
+    else:
+        for i in range(numero,-1,-2):
+            print(i)
 
-    for i in range(numero,-1,-2):
-        print(i)
 
-
-leer_numero()
+try:
+    leer_numero()
+except ValueError:
+    print("Error, el numero introducido debe ser un numero entero")
